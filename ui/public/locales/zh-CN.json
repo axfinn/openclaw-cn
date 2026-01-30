@@ -62,35 +62,225 @@
     }
   },
   "channels": {
+    "title": "渠道",
+    "subtitle": "链接消息平台并监控连接状态。",
+    "health": {
+      "title": "渠道健康状态",
+      "subtitle": "来自网关的渠道状态快照。",
+      "noSnapshot": "暂无快照。"
+    },
+    "status": {
+      "configured": "已配置",
+      "linked": "已链接",
+      "running": "运行中",
+      "connected": "已连接",
+      "lastConnect": "最后连接",
+      "lastMessage": "最后消息",
+      "authAge": "认证时长"
+    },
     "whatsapp": {
       "title": "WhatsApp",
+      "subtitle": "链接 WhatsApp Web 并监控连接状态。",
       "showQrButton": "显示二维码",
       "relinkButton": "重新链接",
       "waitForScan": "等待扫描",
       "logoutButton": "退出登录",
-      "refreshButton": "刷新"
-    },
-    "discord": {
-      "title": "Discord"
+      "refreshButton": "刷新",
+      "working": "处理中…"
     },
     "telegram": {
-      "title": "Telegram"
+      "title": "Telegram",
+      "subtitle": "链接 Telegram 机器人并监控连接状态。"
+    },
+    "discord": {
+      "title": "Discord",
+      "subtitle": "链接 Discord 机器人并监控连接状态。"
     },
     "slack": {
-      "title": "Slack"
+      "title": "Slack",
+      "subtitle": "链接 Slack 机器人并监控连接状态。"
     },
     "signal": {
-      "title": "Signal"
+      "title": "Signal",
+      "subtitle": "链接 Signal 并监控连接状态。"
     },
     "imessage": {
-      "title": "iMessage"
+      "title": "iMessage",
+      "subtitle": "链接 iMessage 并监控连接状态。"
     },
     "googlechat": {
-      "title": "Google Chat"
+      "title": "Google Chat",
+      "subtitle": "链接 Google Chat 机器人并监控连接状态。"
     },
     "nostr": {
-      "title": "Nostr"
+      "title": "Nostr",
+      "subtitle": "管理 Nostr 配置文件和中继。"
     }
+  },
+  "chat": {
+    "placeholder": "输入消息...",
+    "sendButton": "发送",
+    "attachButton": "附加",
+    "focusModeButton": "专注模式",
+    "newSessionButton": "新会话",
+    "abortButton": "中止",
+    "refreshButton": "刷新",
+    "compacting": "压缩上下文中...",
+    "compacted": "上下文已压缩",
+    "queuedMessages": "排队消息",
+    "removeFromQueue": "从队列中移除",
+    "pasteImages": "在此粘贴图片",
+    "dropImages": "将图片拖放到此处",
+    "attachmentLimit": "最多 {count} 张图片"
+  },
+  "sessions": {
+    "title": "会话",
+    "subtitle": "活动会话密钥和每个会话的覆盖设置。",
+    "refreshButton": "刷新",
+    "filters": {
+      "activeWithin": "活跃时间（分钟内）",
+      "limit": "限制",
+      "includeGlobal": "包含全局",
+      "includeUnknown": "包含未知"
+    },
+    "table": {
+      "key": "密钥",
+      "label": "标签",
+      "agent": "代理",
+      "thinking": "思考",
+      "verbose": "详细",
+      "reasoning": "推理",
+      "lastActive": "最后活跃",
+      "tokens": "令牌",
+      "actions": "操作"
+    },
+    "inherit": "继承",
+    "deleteButton": "删除",
+    "noSessions": "未找到会话。"
+  },
+  "config": {
+    "title": "配置",
+    "subtitle": "网关配置和运行时覆盖。",
+    "saveButton": "保存",
+    "applyButton": "应用",
+    "updateButton": "更新",
+    "cancelButton": "取消",
+    "saved": "配置已保存",
+    "applied": "配置已应用"
+  },
+  "skills": {
+    "title": "技能",
+    "subtitle": "已安装的技能和技能管理。",
+    "installButton": "安装",
+    "enableButton": "启用",
+    "disableButton": "禁用",
+    "refreshButton": "刷新",
+    "installed": "已安装",
+    "enabled": "已启用",
+    "disabled": "已禁用"
+  },
+  "logs": {
+    "title": "日志",
+    "subtitle": "网关日志和调试信息。",
+    "refreshButton": "刷新",
+    "clearButton": "清除",
+    "exportButton": "导出",
+    "filters": {
+      "level": "级别",
+      "limit": "限制",
+      "search": "搜索"
+    }
+  },
+  "instances": {
+    "title": "实例",
+    "subtitle": "在线信标和活动实例。",
+    "refreshButton": "刷新",
+    "lastSeen": "最后见到"
+  },
+  "cron": {
+    "title": "定时任务",
+    "subtitle": "计划任务和重复任务。",
+    "addButton": "添加任务",
+    "enableButton": "启用",
+    "disableButton": "禁用",
+    "runButton": "立即运行",
+    "deleteButton": "删除",
+    "refreshButton": "刷新"
+  },
+  "nodes": {
+    "title": "节点",
+    "subtitle": "已连接的设备节点和功能。",
+    "refreshButton": "刷新"
+  },
+  "debug": {
+    "title": "调试",
+    "subtitle": "调试信息和诊断。",
+    "refreshButton": "刷新"
+  },
+  "navigation": {
+    "groups": {
+      "chat": "聊天",
+      "control": "控制",
+      "agent": "代理",
+      "settings": "设置",
+      "resources": "资源"
+    },
+    "tabs": {
+      "overview": {
+        "title": "概览",
+        "subtitle": "网关状态、入口点和快速健康检查。"
+      },
+      "channels": {
+        "title": "渠道",
+        "subtitle": "管理渠道和设置。"
+      },
+      "instances": {
+        "title": "实例",
+        "subtitle": "来自已连接客户端和节点的在线信标。"
+      },
+      "sessions": {
+        "title": "会话",
+        "subtitle": "检查活动会话并调整每个会话的默认设置。"
+      },
+      "cron": {
+        "title": "定时任务",
+        "subtitle": "安排唤醒和重复的代理运行。"
+      },
+      "skills": {
+        "title": "技能",
+        "subtitle": "管理技能可用性和 API 密钥注入。"
+      },
+      "nodes": {
+        "title": "节点",
+        "subtitle": "配对设备、功能和命令暴露。"
+      },
+      "chat": {
+        "title": "聊天",
+        "subtitle": "直接网关聊天会话，用于快速干预。"
+      },
+      "config": {
+        "title": "配置",
+        "subtitle": "安全地编辑 ~/.openclaw/openclaw.json。"
+      },
+      "debug": {
+        "title": "调试",
+        "subtitle": "网关快照、事件和手动 RPC 调用。"
+      },
+      "logs": {
+        "title": "日志",
+        "subtitle": "网关文件日志的实时跟踪。"
+      }
+    },
+    "docs": "文档"
+  },
+  "topbar": {
+    "brand": "OPENCLAW",
+    "brandSub": "网关仪表板",
+    "health": "健康状况",
+    "ok": "正常",
+    "offline": "离线",
+    "expandSidebar": "展开侧边栏",
+    "collapseSidebar": "折叠侧边栏"
   },
   "common": {
     "na": "不适用",
