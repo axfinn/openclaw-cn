@@ -24,7 +24,8 @@ services:
         "--bind",
         "${OPENCLAW_GATEWAY_BIND:-lan}",
         "--port",
-        "${OPENCLAW_GATEWAY_PORT:-18789}"
+        "${OPENCLAW_GATEWAY_PORT:-18789}",
+        "--force"
       ]
 
   openclaw-cli:
@@ -33,6 +34,9 @@ services:
       HOME: /home/node
       TERM: xterm-256color
       BROWSER: echo
+      OPENCLAW_GATEWAY_MODE: remote
+      OPENCLAW_GATEWAY_REMOTE_URL: ws://openclaw-gateway:18789
+      OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
       CLAUDE_AI_SESSION_KEY: ${CLAUDE_AI_SESSION_KEY}
       CLAUDE_WEB_SESSION_KEY: ${CLAUDE_WEB_SESSION_KEY}
       CLAUDE_WEB_COOKIE: ${CLAUDE_WEB_COOKIE}
