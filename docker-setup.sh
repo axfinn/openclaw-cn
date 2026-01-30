@@ -274,6 +274,12 @@ echo ""
 docker compose "${COMPOSE_ARGS[@]}" run --rm openclaw-cli onboard --no-install-daemon
 
 echo ""
+echo "==> Fixing Docker environment config"
+docker compose "${COMPOSE_ARGS[@]}" run --rm openclaw-cli config set gateway.mode "remote"
+docker compose "${COMPOSE_ARGS[@]}" run --rm openclaw-cli config set gateway.remote.url "ws://openclaw-gateway:18789"
+docker compose "${COMPOSE_ARGS[@]}" run --rm openclaw-cli config set gateway.remote.token "$OPENCLAW_GATEWAY_TOKEN"
+
+echo ""
 echo "==> Provider setup (optional)"
 echo "WhatsApp (QR):"
 echo "  ${COMPOSE_HINT} run --rm openclaw-cli channels login"
