@@ -2,6 +2,7 @@ import { html, nothing } from "lit";
 
 import { formatPresenceAge, formatPresenceSummary } from "../presenter";
 import type { PresenceEntry } from "../types";
+import { t } from "../i18n";
 
 export type InstancesProps = {
   loading: boolean;
@@ -16,11 +17,11 @@ export function renderInstances(props: InstancesProps) {
     <section class="card">
       <div class="row" style="justify-content: space-between;">
         <div>
-          <div class="card-title">Connected Instances</div>
-          <div class="card-sub">Presence beacons from the gateway and clients.</div>
+          <div class="card-title">${t("instances.title")}</div>
+          <div class="card-sub">${t("instances.subtitle")}</div>
         </div>
         <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-          ${props.loading ? "Loading…" : "Refresh"}
+          ${props.loading ? t("common.loading") : t("instances.refreshButton")}
         </button>
       </div>
       ${props.lastError
@@ -46,7 +47,7 @@ function renderEntry(entry: PresenceEntry) {
   const lastInput =
     entry.lastInputSeconds != null
       ? `${entry.lastInputSeconds}s ago`
-      : "n/a";
+      : t("common.na");
   const mode = entry.mode ?? "unknown";
   const roles = Array.isArray(entry.roles) ? entry.roles.filter(Boolean) : [];
   const scopes = Array.isArray(entry.scopes) ? entry.scopes.filter(Boolean) : [];

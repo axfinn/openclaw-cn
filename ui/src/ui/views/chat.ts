@@ -5,6 +5,7 @@ import type { SessionsListResult } from "../types";
 import type { ChatAttachment, ChatQueueItem } from "../ui-types";
 import type { ChatItem, MessageGroup } from "../types/chat-types";
 import { icons } from "../icons";
+import { t } from "../i18n";
 import {
   normalizeMessage,
   normalizeRoleForGrouping,
@@ -84,7 +85,7 @@ function renderCompactionIndicator(status: CompactionIndicatorStatus | null | un
   if (status.active) {
     return html`
       <div class="callout info compaction-indicator compaction-indicator--active">
-        ${icons.loader} Compacting context...
+        ${icons.loader} ${t("chat.compacting")}
       </div>
     `;
   }
@@ -95,7 +96,7 @@ function renderCompactionIndicator(status: CompactionIndicatorStatus | null | un
     if (elapsed < COMPACTION_TOAST_DURATION_MS) {
       return html`
         <div class="callout success compaction-indicator compaction-indicator--complete">
-          ${icons.check} Context compacted
+          ${icons.check} ${t("chat.compacted")}
         </div>
       `;
     }
@@ -197,8 +198,8 @@ export function renderChat(props: ChatProps) {
   const hasAttachments = (props.attachments?.length ?? 0) > 0;
   const composePlaceholder = props.connected
     ? hasAttachments
-      ? "Add a message or paste more images..."
-      : "Message (↩ to send, Shift+↩ for line breaks, paste images)"
+      ? t("chat.pasteImages")
+      : t("chat.placeholder")
     : "Connect to the gateway to start chatting…";
 
   const splitRatio = props.splitRatio ?? 0.6;
@@ -359,14 +360,14 @@ export function renderChat(props: ChatProps) {
               ?disabled=${!props.connected || (!canAbort && props.sending)}
               @click=${canAbort ? props.onAbort : props.onNewSession}
             >
-              ${canAbort ? "Stop" : "New session"}
+              ${canAbort ? t("chat.abortButton") : t("chat.newSessionButton")}
             </button>
             <button
               class="btn primary"
               ?disabled=${!props.connected}
               @click=${props.onSend}
             >
-              ${isBusy ? "Queue" : "Send"}<kbd class="btn-kbd">↵</kbd>
+              ${isBusy ? "Queue" : t("chat.sendButton")}<kbd class="btn-kbd">↵</kbd>
             </button>
           </div>
         </div>
