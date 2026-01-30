@@ -1,0 +1,112 @@
+{
+  "overview": {
+    "gatewayAccess": {
+      "title": "Gateway Access",
+      "subtitle": "Where the dashboard connects and how it authenticates.",
+      "websocketUrl": "WebSocket URL",
+      "websocketUrlPlaceholder": "ws://100.x.y.z:18789",
+      "gatewayToken": "Gateway Token",
+      "gatewayTokenPlaceholder": "OPENCLAW_GATEWAY_TOKEN",
+      "password": "Password (not stored)",
+      "passwordPlaceholder": "system or shared password",
+      "defaultSessionKey": "Default Session Key",
+      "connectButton": "Connect",
+      "refreshButton": "Refresh",
+      "connectHint": "Click Connect to apply connection changes."
+    },
+    "snapshot": {
+      "title": "Snapshot",
+      "subtitle": "Latest gateway handshake information.",
+      "status": "Status",
+      "statusConnected": "Connected",
+      "statusDisconnected": "Disconnected",
+      "uptime": "Uptime",
+      "tickInterval": "Tick Interval",
+      "lastChannelsRefresh": "Last Channels Refresh",
+      "channelsHint": "Use Channels to link WhatsApp, Telegram, Discord, Signal, or iMessage."
+    },
+    "auth": {
+      "authRequired": "This gateway requires auth. Add a token or password, then click Connect.",
+      "authFailed": "Auth failed. Re-copy a tokenized URL with",
+      "authFailedHint": "or update the token, then click Connect.",
+      "docsAuthLink": "Docs: Control UI auth"
+    },
+    "insecureContext": {
+      "httpWarning": "This page is HTTP, so the browser blocks device identity. Use HTTPS (Tailscale Serve) or open",
+      "httpWarningLocalhost": "on the gateway host.",
+      "httpFallback": "If you must stay on HTTP, set",
+      "httpFallbackConfig": "gateway.controlUi.allowInsecureAuth: true",
+      "httpFallbackHint": "(token-only).",
+      "docsTailscaleLink": "Docs: Tailscale Serve",
+      "docsInsecureHttpLink": "Docs: Insecure HTTP"
+    },
+    "stats": {
+      "instances": "Instances",
+      "instancesHint": "Presence beacons in the last 5 minutes.",
+      "sessions": "Sessions",
+      "sessionsHint": "Recent session keys tracked by the gateway.",
+      "cron": "Cron",
+      "cronEnabled": "Enabled",
+      "cronDisabled": "Disabled",
+      "cronNextWake": "Next wake"
+    },
+    "notes": {
+      "title": "Notes",
+      "subtitle": "Quick reminders for remote control setups.",
+      "tailscaleServe": "Tailscale serve",
+      "tailscaleServeHint": "Prefer serve mode to keep the gateway on loopback with tailnet auth.",
+      "sessionHygiene": "Session hygiene",
+      "sessionHygieneHint": "Use /new or sessions.patch to reset context.",
+      "cronReminders": "Cron reminders",
+      "cronRemindersHint": "Use isolated sessions for recurring runs."
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "showQrButton": "Show QR",
+      "relinkButton": "Relink",
+      "waitForScan": "Wait for scan",
+      "logoutButton": "Logout",
+      "refreshButton": "Refresh"
+    },
+    "discord": {
+      "title": "Discord"
+    },
+    "telegram": {
+      "title": "Telegram"
+    },
+    "slack": {
+      "title": "Slack"
+    },
+    "signal": {
+      "title": "Signal"
+    },
+    "imessage": {
+      "title": "iMessage"
+    },
+    "googlechat": {
+      "title": "Google Chat"
+    },
+    "nostr": {
+      "title": "Nostr"
+    }
+  },
+  "common": {
+    "na": "n/a",
+    "yes": "Yes",
+    "no": "No",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "import": "Import",
+    "export": "Export",
+    "configured": "Configured",
+    "linked": "Linked",
+    "running": "Running",
+    "connected": "Connected",
+    "loading": "Loading...",
+    "error": "Error"
+  }
+}

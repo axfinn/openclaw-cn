@@ -1,0 +1,112 @@
+{
+  "overview": {
+    "gatewayAccess": {
+      "title": "网关访问",
+      "subtitle": "控制面板连接位置及认证方式。",
+      "websocketUrl": "WebSocket 地址",
+      "websocketUrlPlaceholder": "ws://100.x.y.z:18789",
+      "gatewayToken": "网关令牌",
+      "gatewayTokenPlaceholder": "OPENCLAW_GATEWAY_TOKEN",
+      "password": "密码（不存储）",
+      "passwordPlaceholder": "系统或共享密码",
+      "defaultSessionKey": "默认会话密钥",
+      "connectButton": "连接",
+      "refreshButton": "刷新",
+      "connectHint": "点击连接以应用连接更改。"
+    },
+    "snapshot": {
+      "title": "快照",
+      "subtitle": "最新网关握手信息。",
+      "status": "状态",
+      "statusConnected": "已连接",
+      "statusDisconnected": "未连接",
+      "uptime": "运行时间",
+      "tickInterval": "心跳间隔",
+      "lastChannelsRefresh": "上次频道刷新",
+      "channelsHint": "使用频道链接 WhatsApp、Telegram、Discord、Signal 或 iMessage。"
+    },
+    "auth": {
+      "authRequired": "此网关需要认证。添加令牌或密码，然后点击连接。",
+      "authFailed": "认证失败。使用以下命令重新复制带令牌的 URL",
+      "authFailedHint": "或更新令牌，然后点击连接。",
+      "docsAuthLink": "文档：控制界面认证"
+    },
+    "insecureContext": {
+      "httpWarning": "此页面使用 HTTP，浏览器阻止了设备身份验证。请使用 HTTPS（Tailscale Serve）或在网关主机上打开",
+      "httpWarningLocalhost": "。",
+      "httpFallback": "如果必须使用 HTTP，请设置",
+      "httpFallbackConfig": "gateway.controlUi.allowInsecureAuth: true",
+      "httpFallbackHint": "（仅限令牌）。",
+      "docsTailscaleLink": "文档：Tailscale Serve",
+      "docsInsecureHttpLink": "文档：不安全的 HTTP"
+    },
+    "stats": {
+      "instances": "实例",
+      "instancesHint": "最近 5 分钟内的在线信标。",
+      "sessions": "会话",
+      "sessionsHint": "网关跟踪的最近会话密钥。",
+      "cron": "定时任务",
+      "cronEnabled": "已启用",
+      "cronDisabled": "已禁用",
+      "cronNextWake": "下次唤醒"
+    },
+    "notes": {
+      "title": "注意事项",
+      "subtitle": "远程控制设置的快速提醒。",
+      "tailscaleServe": "Tailscale serve",
+      "tailscaleServeHint": "优先使用 serve 模式，保持网关在本地环回且使用 tailnet 认证。",
+      "sessionHygiene": "会话管理",
+      "sessionHygieneHint": "使用 /new 或 sessions.patch 来重置上下文。",
+      "cronReminders": "定时任务提醒",
+      "cronRemindersHint": "对重复运行使用隔离的会话。"
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "showQrButton": "显示二维码",
+      "relinkButton": "重新链接",
+      "waitForScan": "等待扫描",
+      "logoutButton": "退出登录",
+      "refreshButton": "刷新"
+    },
+    "discord": {
+      "title": "Discord"
+    },
+    "telegram": {
+      "title": "Telegram"
+    },
+    "slack": {
+      "title": "Slack"
+    },
+    "signal": {
+      "title": "Signal"
+    },
+    "imessage": {
+      "title": "iMessage"
+    },
+    "googlechat": {
+      "title": "Google Chat"
+    },
+    "nostr": {
+      "title": "Nostr"
+    }
+  },
+  "common": {
+    "na": "不适用",
+    "yes": "是",
+    "no": "否",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "import": "导入",
+    "export": "导出",
+    "configured": "已配置",
+    "linked": "已链接",
+    "running": "运行中",
+    "connected": "已连接",
+    "loading": "加载中...",
+    "error": "错误"
+  }
+}

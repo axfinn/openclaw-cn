@@ -10,6 +10,7 @@ import { syncUrlWithSessionKey } from "./app-settings";
 import type { SessionsListResult } from "./types";
 import type { ThemeMode } from "./theme";
 import type { ThemeTransitionContext } from "./theme-transition";
+import { getLocale, setLocale, getAvailableLocales } from "./i18n";
 
 export function renderTab(state: AppViewState, tab: Tab) {
   const href = pathForTab(tab, state.basePath);
@@ -194,6 +195,36 @@ function resolveSessionOptions(
 }
 
 const THEME_ORDER: ThemeMode[] = ["system", "light", "dark"];
+
+// Language switcher
+export function renderLanguageSwitcher() {
+  const currentLocale = getLocale();
+  const locales = getAvailableLocales();
+
+  return html`
+    <div class="lang-switcher">
+      <select
+        class="lang-select"
+        .value=${currentLocale}
+        @change=${(e: Event) => {
+          const value = (e.target as HTMLSelectElement).value as "en" | "zh-CN";
+          setLocale(value);
+          window.location.reload();
+        }}
+        aria-label="Language"
+        title="Select Language"
+      >
+        ${locales.map(
+          (locale) => html`
+            <option value="${locale.code}" ?selected=${locale.code === currentLocale}>
+              ${locale.name}
+            </option>
+          `
+        )}
+      </select>
+    </div>
+  `;
+}
 
 export function renderThemeToggle(state: AppViewState) {
   const index = Math.max(0, THEME_ORDER.indexOf(state.theme));
